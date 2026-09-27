@@ -1,6 +1,12 @@
-### Hi, I'm Georg.
+I build data platforms that companies bet their numbers on, and the tooling that keeps them running. My specialty is entity and identity resolution. Now I'm focused on AI-ready infrastructure: systems that ML and agents can operate on directly.
 
-I'm a Data Engineer. In my spare time I build Python tooling for coding agents and release automation.
+#### Background
+
+- Eight years at Atlassian, from software engineer to Principal Data Engineer. I co-architected the customer master-data platform that unified 300,000+ customers into a single source of truth, and built an identity graph ingesting 100M+ behavioural events a day.
+- Wrote and open-sourced [Observe](https://github.com/atlassian-labs/observe), a Python observability decorator. [observe-kit](https://github.com/MdaaaaO/observe-kit) is its rewrite.
+- Co-inventor of a collaborative data-quality framework, [U.S. Patent 10,909,109](https://patents.google.com/patent/US10909109B1/en).
+
+#### What I'm building now
 
 | Project | What it does |
 |---|---|
