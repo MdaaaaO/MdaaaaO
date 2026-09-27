@@ -2,11 +2,11 @@ I build data platforms that companies bet their numbers on, and the tooling that
 
 #### At Docker
 
-Staff Software Engineer on the Data Platform team since July 2026. I work on canonical data products, event pipelines and the internal tooling around them, including agent tooling for the team's own workflow.
+On the Data Platform team since July 2026. I work on canonical data products, event pipelines and the internal tooling around them, including agent tooling for the team's own workflow.
 
 #### Before that
 
-- Eight years at Atlassian, from software engineer to Principal Data Engineer. I co-architected the customer master-data platform that unified 300,000+ customers into a single source of truth, and built an identity graph ingesting 100M+ behavioural events a day.
+- Eight years at Atlassian. I co-architected the customer master-data platform that unified 300,000+ customers into a single source of truth, and built an identity graph ingesting 100M+ behavioural events a day.
 - Wrote and open-sourced [Observe](https://github.com/atlassian-labs/observe), a Python observability decorator. [observe-kit](https://github.com/MdaaaaO/observe-kit) is its rewrite.
 - Co-inventor of a collaborative data-quality framework, [U.S. Patent 10,909,109](https://patents.google.com/patent/US10909109B1/en).
 
