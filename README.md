@@ -2,7 +2,7 @@ I build data platforms that companies bet their numbers on, and the tooling that
 
 #### At Docker
 
-On the Data Platform team since July 2026. I work on canonical data products, event pipelines and the internal tooling around them, including agent tooling for the team's own workflow.
+On the Data Platform team. I work on canonical data products, event pipelines and the internal tooling around them, including agent tooling for the team's own workflow.
 
 #### Before that
 
