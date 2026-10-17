@@ -1,21 +1,16 @@
 I build data platforms that companies bet their numbers on, and the tooling that keeps them running. My specialty is entity and identity resolution. Now I'm focused on AI-ready infrastructure: systems that ML and agents can operate on directly.
 
-#### ai-baton: new in 0.5
+#### ai-baton, at 0.11
 
-- **Sessions keep each other honest.** Every session now leaves a ready-to-use prompt for the next one, checks its own work against the kit before it closes, and signs the pull requests it opens, so a new session can pick up where the last one stopped.
-- **The right model for each job.** Reading and sorting goes to a small, cheap model and routine fixes to a mid-size one. The largest model is kept for judgement calls, which cuts cost without cutting quality.
-- **Safer by default.** Checks catch private names and secrets before they leave the machine, reviews are tied to the exact change they approved, and every script now runs the same on Linux, WSL and macOS.
-- **Sturdier throughout.** More than fifty fixes found by reviewing the whole kit: no more silent failures, clearer errors, and tests that cannot touch your real setup.
+A workspace kit for Claude Code, built for the moment one session is not enough.
 
-[Release notes](https://github.com/MdaaaaO/ai-baton/releases/tag/v0.5.0)
+- **Context that accumulates.** Sessions write what they learn into a markdown database beside the repos, optionally its own git repo that every machine pulls. The next session does not start cold.
+- **Sessions choose their context.** An index names every doc and a brief per initiative; a session reads what it works on, not everything, so the loaded context and the cost stay small.
+- **Initiatives outlive sessions.** One doc per initiative. A session ends with a handoff prompt; its successor reads it back, checks each claim against the tracker and the open pull requests, and only then edits. A stale prompt is caught before it is acted on.
+- **A live registry.** Who works on what right now, with heartbeats, the pull requests each session watches and what each session cost, so a second session coordinates instead of colliding.
+- **Tooling, not prose.** Index, registry, session stats, health check and sync are scripts and hooks that run with zero model turns; the skills are the thin layer on top. One install command, one setup run, no names or ids in the kit.
 
-#### Coming in ai-baton 0.6
-
-- **Shared memory that answers.** ai-baton will keep its notes in [ctx-store](https://github.com/MdaaaaO/ctx-store). Describe the task, and the session opens with the few notes that matter instead of reading everything.
-- **Every skill tested.** Each skill gets its own examples that prove it still triggers and behaves after a change.
-- **Easier first steps.** Clearer setup docs, so a new user gets from install to a first working session faster.
-
-[Follow along](https://github.com/MdaaaaO/ai-baton/milestone/3)
+[Releases](https://github.com/MdaaaaO/ai-baton/releases) · [Discussions](https://github.com/MdaaaaO/ai-baton/discussions)
 
 #### At Docker
 
@@ -31,9 +26,9 @@ On the Data Platform team. I work on canonical data products, event pipelines an
 
 | Project | What it does |
 |---|---|
-| [ai-baton](https://github.com/MdaaaaO/ai-baton) | A workspace kit for Claude Code: shared skills, rules and memory for every session, handoffs between sessions, and a self-check that keeps every machine healthy. |
+| [ai-baton](https://github.com/MdaaaaO/ai-baton) | A workspace kit for Claude Code: a context database that grows with every session, a live registry of who works on what, and handoffs that let an initiative outlive any one session. |
 | [conventional-release](https://github.com/MdaaaaO/conventional-release) | CHANGELOG and release PRs from Conventional Commits, tagged by CI after merge. No Node. |
 | [observe-kit](https://github.com/MdaaaaO/observe-kit) | `@observed`: one Python decorator that times a call, classifies how it ended, logs it with structlog and emits an event. On [PyPI](https://pypi.org/project/observe-kit/). |
-| [ctx-store](https://github.com/MdaaaaO/ctx-store) | A markdown context store for coding agents: validated writes, budgeted reads, audit trail. Early stage. |
+| [ctx-store](https://github.com/MdaaaaO/ctx-store) | A markdown context store for coding agents: validated writes, budgeted reads, audit trail. ai-baton's storage engine. |
 
 Questions or ideas? Open an issue on the relevant repo.
